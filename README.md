@@ -1,0 +1,1 @@
+# Redimensionador-e-Compressor-de-Imagens
