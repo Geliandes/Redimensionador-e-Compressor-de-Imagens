@@ -1,6 +1,9 @@
 # Redimensionador e Compressor de Imagens
 
-#### O objetivo desse programa criado em Node.JS é possibilitar o redimensionamento e compressão de imagens em massa através dos links da imagens na internet. Primeiramente é feito o donwload das imagens, em seguida as imagens são redimensionadas de acordo com as configurações feitas no arquivo app.js e por último elas são comprimidas
+#### O objetivo desse programa criado em Node.JS é possibilitar o redimensionamento e compressão de imagens em massa através dos links da imagens na internet. A execução ocorre da seguinte forma:
+1. Donwload das imagens;
+2. Redimensionamento das imagens de acordo com as configurações feitas no arquivo app.js;
+3. Compressão das imagens.
 
 ##### Observação Este é um programa criado para fins estudantis, utilizando os seguintes pacotes: gifsicle, pngquant-bin, sharp e compress-images.
 
