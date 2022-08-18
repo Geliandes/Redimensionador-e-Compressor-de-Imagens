@@ -1,6 +1,6 @@
 # Redimensionador-e-Compressor-de-Imagens
 
-## INSTRUÇÕES DE USO
+## Instruções de uso
 
 - Após baixar os arquivos, execute primeiramente o arquivo **cirar-pastas**, ele vai criar as pastas necessárias no mesmo diretório para o funcionamento do programa
 - Abra o arquivo **app.js** com o Visual Studio Code e execute o comando **npm install** para instalar todas as dependências do programa (pacotes de redimensionamento e compressão)
