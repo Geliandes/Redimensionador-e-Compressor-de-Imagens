@@ -15,7 +15,7 @@
 - Após preencher o arquivo de texto com os links, execute o comando **node app** no terminal do programa para executar.
 
 ## Comandos
-**Os comandos devem ser executado no terminal do Visual Studio Code do programa**
+**Os comandos devem ser executado no terminal do Visual Studio Code**
 
 **Instalar dependências**
 ```
