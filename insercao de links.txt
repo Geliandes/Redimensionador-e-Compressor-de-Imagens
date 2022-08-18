@@ -1,4 +1,0 @@
-https://exemple.com.br/imagem1.jpg,
-https://exemple.com.br/imagem2.jpg,
-https://exemple.com.br/imagem3.png,
-https://exemple.com.br/imagem4.webp
