@@ -26,5 +26,4 @@ npm install
 node app
 ```
 
-
-
+Sintam-se à vontade para fazer commits que possam melhorar o programa :)
