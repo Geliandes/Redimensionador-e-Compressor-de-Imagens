@@ -3,9 +3,7 @@
 #### O objetivo desse programa criado em Node.JS é possibilitar o redimensionamento e compressão de imagens em massa através dos links da imagens na internet. A execução ocorre da seguinte forma:
 1. Donwload das imagens;
 2. Redimensionamento das imagens de acordo com as configurações feitas no arquivo app.js;
-3. Compressão das imagens.
-
-(Ainda não foi atribuído um pacote para compressão de imagens WebP)
+3. Compressão das imagens (Obs. Ainda não foi atribuído um pacote para compressão de imagens WebP).
 
 ##### Observação Este é um programa criado para fins estudantis, utilizando os seguintes pacotes: gifsicle, pngquant-bin, sharp e compress-images.
 
