@@ -1,0 +1,19 @@
+{
+  "name": "imageeditor",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "gifsicle": "^5.2.1",
+    "pngquant-bin": "^6.0.1",
+    "sharp": "^0.30.7"
+  },
+  "devDependencies": {
+    "compress-images": "^2.0.5"
+  }
+}
