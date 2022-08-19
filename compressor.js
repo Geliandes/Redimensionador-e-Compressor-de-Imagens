@@ -29,7 +29,6 @@ function imageCompressor() {
         outputPath = "./compressed/";
 
         for(let i = 0; i < images.length; i++){
-            console.log(images[i]);
             compress(`resized/${images[i]}`, outputPath);
             console.log(`A imagem ${images[i]} foi comprimida com sucesso!`);
             
