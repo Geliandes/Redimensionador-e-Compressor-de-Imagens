@@ -3,7 +3,6 @@ function downloadImages(){
     const textoFinal = require('./execute');
     const fs = require('fs');
     const https = require('https');
-    const texto = require('./execute')
     const resizeImages = require('./resize')
   
     // URL da imagem
