@@ -12,7 +12,7 @@ const execute = require('./execute');
 
 const mainApp = {
 
-    // Digite a largura da imagem em pxa
+    // Digite a largura da imagem em px
     width: 1200,
 
     // Digite a altura da imagem em pc
