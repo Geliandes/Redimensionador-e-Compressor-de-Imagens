@@ -1,4 +1,5 @@
 function downloadImages(){
+    
     const textoFinal = require('./execute');
     const fs = require('fs');
     const https = require('https');
@@ -6,10 +7,10 @@ function downloadImages(){
     const resizeImages = require('./resize')
   
     // URL da imagem
-    let url = textoFinal.arrayDeLinks
+    let url = textoFinal.arrayDeLinks;
 
     // Regex para pegar o mesmo nome da imagem
-    const regex = new RegExp("\/([^/]*)$")
+    const regex = new RegExp("\/([^/]*)$");
 
     let callback = 0;
 
@@ -18,7 +19,7 @@ function downloadImages(){
         https.get(url[i],(res) => {
 
             let urlRegex = url[i].match(regex)[1]
-            let fileName = "img.jpg"
+            let fileName = "img.jpg";
 
             if(urlRegex !== undefined){
                 fileName = urlRegex;
@@ -33,7 +34,7 @@ function downloadImages(){
                 callback ++;
 
                 if(callback == url.length){
-                    console.log('\n--- Downloads concluídos, iniciando o redimensionamento das imagens ---\n')
+                    console.log('\n--- Downloads concluídos, iniciando o redimensionamento das imagens ---\n');
                     resizeImages();
                 }
             })
@@ -41,4 +42,4 @@ function downloadImages(){
     }
 }
 
-module.exports = downloadImages
+module.exports = downloadImages;

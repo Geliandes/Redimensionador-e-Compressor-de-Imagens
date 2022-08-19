@@ -26,15 +26,15 @@ function imageCompressor() {
     fs.readdir(path.join('./resized'))
     .then(files => {
         const images = files.filter((file) => true)
-        outputPath = "./compressed/"
+        outputPath = "./compressed/";
 
         for(let i = 0; i < images.length; i++){
-            console.log(images[i])
-            compress(`resized/${images[i]}`, outputPath)
-            console.log(`A imagem ${images[i]} foi comprimida com sucesso!`)
+            console.log(images[i]);
+            compress(`resized/${images[i]}`, outputPath);
+            console.log(`A imagem ${images[i]} foi comprimida com sucesso!`);
             
         }
     })
 }
 
-module.exports = imageCompressor
+module.exports = imageCompressor;

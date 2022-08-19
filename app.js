@@ -25,6 +25,6 @@ const mainApp = {
     qualidade: 85
 }
 
-module.exports = mainApp
+module.exports = mainApp;
 
 execute();
