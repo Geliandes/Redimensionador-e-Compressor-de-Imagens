@@ -6,7 +6,7 @@
 3. Compressão das imagens (Obs. Ainda não foi atribuído um pacote para compressão de imagens WebP).
 
 ## Requisitos
-- É necessário que o Node.js esteja instalado em seu computador para que o programa funcione, caso não tenha, você pode baixa-lo através deste link [nodejs.org/en/download/](https://nodejs.org/en/download/)
+- É necessário que o Node.js esteja instalado em seu computador para que o programa funcione, caso não tenha, você pode baixa-lo através deste [link](https://nodejs.org/en/download/)
 
 ##### Observação Este é um programa criado para fins estudantis, utilizando os seguintes pacotes: **gifsicle**, **pngquant-bin**, **sharp** e **compress-images**.
 
