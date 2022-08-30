@@ -7,8 +7,6 @@
 
 PS. Ainda não foi integrado suporte para compressão de AVIF, porém o redimensionamento para imagens AVIF funciona normalmente.
 
-##### Observação Este é um programa criado para fins estudantis, utilizando os seguintes pacotes: **gifsicle**, **pngquant-bin**, **sharp** e **compress-images**.
-
 ## Requisitos
 - É necessário que o Node.js esteja instalado em seu computador para que o programa funcione, caso não tenha, você pode baixa-lo através deste [link](https://nodejs.org/en/download/)
 
@@ -30,5 +28,7 @@ npm install
 ```
 node app
 ```
+
+##### Observação Este é um programa criado para fins estudantis, utilizando os seguintes pacotes: **gifsicle**, **pngquant-bin**, **sharp** e **compress-images**.
 
 Sintam-se à vontade para fazer commits que possam melhorar o programa :)
