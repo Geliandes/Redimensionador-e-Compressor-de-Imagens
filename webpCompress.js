@@ -14,7 +14,7 @@ function webpCompress(){
             .webp({quality: mainApp.qualidade})
             .toFile('./compressed/' + images[i].toString(), (err, info) =>{
                 if(err){
-                    console.log(`Não foi possível comprimir a imagem ${images[i]}`)
+                    console.log(`Não foi possível comprimir a imagem ${images[i]}`);
                 } else{
                     console.log(`A imagem ${images[i]} foi comprimida com sucesso!`);
                 }

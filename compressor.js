@@ -25,7 +25,7 @@ function imageCompressor() {
 
     fs.readdir(path.join('./resized'))
     .then(files => {
-        const images = files.filter((file) => true)
+        const images = files.filter((file) => true);
         outputPath = "./compressed/";
 
         for(let i = 0; i < images.length; i++){

@@ -27,9 +27,9 @@ function resizeImages(){
                     console.log('ATENÇÃO! Não é possível comprimir imagens do tipo AVIF\n')
                 } else{
                     if(mainApp.formato.toLowerCase() === 'webp'){
-                        setTimeout(()=>{webpCompress()},2000)
+                        setTimeout(()=>{webpCompress()},2000);
                     } else{
-                        setTimeout(()=>{imageCompressor()},2000)
+                        setTimeout(()=>{imageCompressor()},2000);
                     }          
                 }                
             }
