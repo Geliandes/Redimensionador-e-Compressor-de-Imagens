@@ -14,7 +14,8 @@ PS. Ainda não foi integrado suporte para compressão de AVIF, porém o redimens
 
 - Após baixar os arquivos abra a pasta do programa no Visual Studio Code e execute o comando **npm install** para instalar todas as dependências do programa (pacotes de redimensionamento e compressão);
 - No arquivo de texto **insecao de links**, devem ser colocados o/os link(s) das imagens que você deseja redimensionar (os links devem ser seperados por vírgula);
-- Após preencher o arquivo de texto com os links, execute o comando **node app** no terminal do programa para executar.
+- Após preencher o arquivo de texto com os links, execute o comando **node app** no terminal do programa para executar;
+- Após a execução, serão criadas 3 pastas, "files", resized e compressed. Em files serão armazenadas as imagens originais, em resized as imagens redimensionadas e em compressed as imagens redimensionadas em comprimidas.
 
 ## Comandos
 **Os comandos devem ser executado no terminal do Visual Studio Code**
