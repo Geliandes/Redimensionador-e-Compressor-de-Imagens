@@ -4,6 +4,7 @@
 1. Download das imagens;
 2. Redimensionamento das imagens de acordo com as configurações feitas no arquivo app.js;
 3. Compressão das imagens (Formatos suportados: JPG, PNG e WEBP).
+
 PS. Ainda não foi integrado suporte para compressão de AVIF, porém o redimensionamento para imagens AVIF funciona normalmente.
 
 ##### Observação Este é um programa criado para fins estudantis, utilizando os seguintes pacotes: **gifsicle**, **pngquant-bin**, **sharp** e **compress-images**.
