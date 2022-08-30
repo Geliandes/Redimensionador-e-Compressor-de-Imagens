@@ -12,16 +12,16 @@ const execute = require('./execute');
 
 const mainApp = {
 
-    // Digite a largura da imagem em px
-    width: 1200,
+    // Digite a largura da imagem em px ()
+    width: null,
 
     // Digite a altura da imagem em pc
     height: null,
 
-    // Insira o formato de saída (JPG, PNG, AVIF, WEBP, SVG ou GIF)
-    formato: 'jpg',
+    // Insira o formato de saída (JPG, PNG, AVIF ou WEBP )
+    formato: 'avif',
 
-    // Digite o valor para a qualidade da imagem a ser comprimida (Obs. Apenas funciona para os formatos JPG, PNG, GIF ou SVG)
+    // Digite um valor para a qualidade da imagem a ser comprimida (0 a 100)
     qualidade: 85
 }
 

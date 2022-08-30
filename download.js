@@ -34,7 +34,7 @@ function downloadImages(){
 
                 if(callback == url.length){
                     console.log('\n--- Downloads concluídos, iniciando o redimensionamento das imagens ---\n');
-                    resizeImages();
+                    setTimeout(()=>{resizeImages()},2000);
                 }
             })
         })
