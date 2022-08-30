@@ -8,7 +8,7 @@
 PS. Ainda não foi integrado suporte para compressão de AVIF, porém o redimensionamento para imagens AVIF funciona normalmente.
 
 ## Requisitos
-- É necessário que o Node.js esteja instalado em seu computador para que o programa funcione, caso não tenha, você pode baixa-lo através deste [link](https://nodejs.org/en/download/)
+- É necessário que o Node.js esteja instalado em seu computador para que o programa funcione, caso não tenha, você pode baixa-lo através deste [link](https://nodejs.org/en/download/).
 
 ## Instruções de uso
 
