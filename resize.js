@@ -18,13 +18,13 @@ function resizeImages(){
             .resize(mainApp.width, mainApp.height, {})
             .toFile('./resized/' + images[i].replace('.jpg','').replace('.png','').replace('.webp', '').replace('.avif','').replace('.gif', '') + `.${mainApp.formato.toLowerCase()}`);
 
-            console.log(`A imagem ${images[i]} foi redimensionada com sucesso!`);
+            console.log("\033[0m" + `A imagem ${images[i]}` + "\033[0;32m foi redimensionada com sucesso!" + "\033[40;1;37m");
             callback ++;
 
             if(callback == images.length){
-                console.log('\n--- Redimensionamento concluído, iniciando a compressão das imagens ---\n');
+                console.log("\n\033[42;1;37m--- Redimensionamento concluído, iniciando a compressão das imagens ---" + "\033[40;1;37m\n");
                 if(mainApp.formato.toLowerCase() === 'avif'){
-                    console.log('ATENÇÃO! Não é possível comprimir imagens do tipo AVIF\n')
+                    console.log("\033[0;31mATENÇÃO! Não é possível comprimir imagens do tipo AVIF" + "\033[40;1;37m\n")
                 } else{
                     if(mainApp.formato.toLowerCase() === 'webp'){
                         setTimeout(()=>{webpCompress()},2000);

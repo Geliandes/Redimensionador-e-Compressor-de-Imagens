@@ -30,7 +30,7 @@ function imageCompressor() {
 
         for(let i = 0; i < images.length; i++){
             compress(`resized/${images[i]}`, outputPath);
-            console.log(`A imagem ${images[i]} foi comprimida com sucesso!`);
+            console.log("\033[40;1;37m" + `A imagem ${images[i]}` + "\033[0;32m foi comprimida com sucesso!" + "\033[40;1;37m");
         }
     })
 }

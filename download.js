@@ -27,13 +27,13 @@ function downloadImages(){
             const path = `${__dirname}/files/${fileName}`; 
             const filePath = fs.createWriteStream(path);
             res.pipe(filePath);
-            filePath.on('finish',() => {
+            filePath.on('finish',(err) => {
                 filePath.close();
-                console.log(`Download da imagem ${fileName} concluído`); 
+                console.log("\033[0m" + `Download da imagem ${fileName}` + "\033[0;32m concluído"); 
                 callback ++;
 
                 if(callback == url.length){
-                    console.log('\n--- Downloads concluídos, iniciando o redimensionamento das imagens ---\n');
+                    console.log("\n\033[42;1;37m--- Downloads concluídos, iniciando o redimensionamento das imagens ---" + "\033[40;1;37m\n");
                     setTimeout(()=>{resizeImages()},2000);
                 }
             })
