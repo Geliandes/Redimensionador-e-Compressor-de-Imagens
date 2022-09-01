@@ -29,10 +29,7 @@ function webpCompress(){
                             let decreased = ((newSize(images, i) * 100) / (oldSize(images, i)) - 100).toFixed(2)
                             console.log("\033[0;32mATENÇÃO!" +"\033[0m o tamanho da imagem " + images[i] + " diminuiu " + "\033[0;32m" + decreased + "%" +"\033[0m")
                         }
-
                     },300) 
-
-
                 }
             });
         }
