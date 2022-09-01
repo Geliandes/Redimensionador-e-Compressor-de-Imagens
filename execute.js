@@ -33,6 +33,7 @@ function execute(){
 
     console.log(textoFinal.arrayDeLinks);
     console.log("\n\033[42;1;37m--- Iniciando o Download das imagens ---" + "\033[40;1;37m\n");
+    
     module.exports = textoFinal;
 
     downloadImages();
