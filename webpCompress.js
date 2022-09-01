@@ -5,9 +5,9 @@ function webpCompress(){
     const path = require('path');
     const mainApp = require('./app');
     
-    fs.readdir(path.join('./files'))
-    .then(files => {
-        const images = files.filter((file) => true);
+    fs.readdir(path.join('./resized'))
+    .then(resized => {
+        const images = resized.filter((image) => true);
 
         for(let i = 0; i < images.length; i++){
             sharp(input = `./resized/${images[i]}`)

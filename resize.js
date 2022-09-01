@@ -5,7 +5,7 @@ function resizeImages(){
     const path = require('path');
     const mainApp = require('./app');
     const imageCompressor = require('./compressor');
-    const webpCompress = require('./webpCompress')
+    const webpCompress = require('./webpCompress');
     let callback = 0;
 
     fs.readdir(path.join('./files'))
