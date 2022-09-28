@@ -27,6 +27,13 @@ function execute(){
         fs.mkdirSync(dir);
     }
 
+    dir = "./converted";
+    //Verifica se não existe
+    if (!fs.existsSync(dir)){
+        //Efetua a criação do diretório
+        fs.mkdirSync(dir);
+    }
+
     const textoFinal = {
         arrayDeLinks: array
     }

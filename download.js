@@ -1,9 +1,8 @@
 function downloadImages(){
-    
     const textoFinal = require('./execute');
     const fs = require('fs');
     const https = require('https');
-    const resizeImages = require('./resize')
+    const convertImages = require('./conversor')
   
     // URL da imagem
     let url = textoFinal.arrayDeLinks;
@@ -33,8 +32,8 @@ function downloadImages(){
                 callback ++;
 
                 if(callback == url.length){
-                    console.log("\n\033[42;1;37m--- Downloads concluídos, iniciando o redimensionamento das imagens ---" + "\033[40;1;37m\n");
-                    setTimeout(()=>{resizeImages()},2000);
+                    console.log("\n\033[42;1;37m--- Downloads concluídos, iniciando a conversão das imagens ---" + "\033[40;1;37m\n");
+                    setTimeout(()=>{convertImages()},2000);
                 }
             })
         })

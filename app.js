@@ -15,7 +15,7 @@ const mainApp = {
     // Caso queira manter as proporções da imagem, basta deixar o width ou o height como "null". Caso não queira redimensionar a imagem, basta deixar tanto o width quanto o height como "null"
 
     // Digite a largura da imagem em px
-    width: 1080,
+    width: null,
 
     // Digite a altura da imagem em pc
     height: null,

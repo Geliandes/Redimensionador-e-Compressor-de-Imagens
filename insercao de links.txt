@@ -1,4 +1,2 @@
-https://www.exemplo.com/imagem1.jpg,
-https://www.exemplo.com/imagem2.png,
-https://www.exemplo.com/imagem3.webp,
-https://www.exemplo.com/imagem4.png
+https://tudodebicho.fbitsstatic.net/img/b/67cde712-e5f3-45e6-9dc2-71a4808e00a5.jpg,
+https://tudodebicho.fbitsstatic.net/img/b/fd7f2d5d-0339-4280-a478-2975f6cb57b4.png
