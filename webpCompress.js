@@ -36,7 +36,7 @@ function webpCompress() {
 								console.log("\033[0;32mATENÇÃO!" + "\033[0m o tamanho da imagem " + images[i] + " diminuiu " + "\033[0;32m" + percentVariationSize + "%" + "\033[0m")
 							}
 							console.log(`Tamanho antigo: ${oldSize} KB`)
-							console.log(`Novo comprimido: ${newSize} KB`)
+							console.log(`Tamanho comprimido: ${newSize} KB`)
 							console.log('')
 						}
 					})
