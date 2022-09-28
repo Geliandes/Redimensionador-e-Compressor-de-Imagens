@@ -1,7 +1,6 @@
 const downloadImages = require('./download')
 
 function execute(){
-
     var fs = require('fs');
     var array = fs.readFileSync('insercao de links.txt').toString().replace(/(\r\n|\n|\r)/gm, "").split(",");
     array = array.filter(vazio => vazio !== '');

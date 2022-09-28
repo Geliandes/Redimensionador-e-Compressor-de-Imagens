@@ -1,7 +1,4 @@
-const { width, height } = require('./app');
-
 function resizeImages(){
-
     const fs = require('fs/promises');
     const path = require('path');
     const mainApp = require('./app');
