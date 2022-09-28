@@ -30,6 +30,6 @@ npm install
 node app
 ```
 
-##### Observação Este é um programa criado para fins estudantis, utilizando os seguintes pacotes: **gifsicle**, **pngquant-bin**, **sharp** e **compress-images**.
+##### Observação Este é um programa criado para fins estudantis, utilizando os seguintes pacotes: **gifsicle**, **pngquant-bin**, **sharp**, **compress-images** e **Jimp**.
 
 Sintam-se à vontade para fazer commits que possam melhorar o programa :)
