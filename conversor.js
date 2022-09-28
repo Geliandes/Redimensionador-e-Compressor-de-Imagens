@@ -15,15 +15,13 @@ function convertImages(){
 
         for(let i = 0; i < images.length; i++){
         
-            // Read the PNG file and convert it to editable format
             Jimp.read(`./files/${images[i]}`, function (err, image) {
                 if (err) {
-                    // Return if any error
                     console.log(err);
                     return;
+                } else{
+                    image.write('./converted/'+ `${images[i]}`.replace('.jpg','').replace('.png','').replace('.webp', '').replace('.avif','').replace('.gif', '') + `.${mainApp.formato.toLowerCase()}`);
                 }
-            
-                image.write('./converted/'+ `${images[i]}`.replace('.jpg','').replace('.png','').replace('.webp', '').replace('.avif','').replace('.gif', '') + `.${mainApp.formato.toLowerCase()}`);
             });
 
             console.log("\033[0m" + `A imagem ${images[i]}` + "\033[0;32m foi convertida com sucesso!" + "\033[40;1;37m");
