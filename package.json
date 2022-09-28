@@ -9,11 +9,11 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "compress-images": "^2.0.5",
     "gifsicle": "^5.2.1",
+    "jimp": "^0.16.2",
     "pngquant-bin": "^6.0.1",
-    "sharp": "^0.30.7"
-  },
-  "devDependencies": {
-    "compress-images": "^2.0.5"
+    "sharp": "^0.31.0",
+    "wait-on": "^6.0.1"
   }
 }
