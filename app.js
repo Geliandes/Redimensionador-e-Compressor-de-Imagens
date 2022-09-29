@@ -24,7 +24,7 @@ const mainApp = {
     formato: 'jpg',
 
     // Digite um valor para a qualidade da imagem a ser comprimida (0 a 100). Recomendo um valor acima de 70
-    qualidade: 90
+    qualidade: 85
 }
 
 module.exports = mainApp;

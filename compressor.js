@@ -1,9 +1,8 @@
 function imageCompressor() {
-
+	const mainApp = require('./app');
 	const fs = require('fs/promises');
 	const path = require('path');
 	const compress_images = require('compress-images');
-	const mainApp = require('./app');
 
 	let dir = 'resized'
 

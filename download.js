@@ -1,8 +1,8 @@
 function downloadImages() {
+	const convertImages = require('./conversor')
 	const textoFinal = require('./execute');
 	const fs = require('fs');
 	const https = require('https');
-	const convertImages = require('./conversor')
 
 	// URL da imagem
 	let url = textoFinal.arrayDeLinks;

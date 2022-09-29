@@ -1,11 +1,12 @@
 function resizeImages() {
-	const fs = require('fs/promises');
-	const path = require('path');
 	const mainApp = require('./app');
 	const imageCompressor = require('./compressor');
 	const webpCompress = require('./webpCompress');
+	const fs = require('fs/promises');
+	const path = require('path');
 	const jimp = require('jimp');
 	const sharp = require('sharp');
+
 	let callback = 0;
 
 	fs.readdir(path.join('./converted'))
@@ -24,8 +25,8 @@ function resizeImages() {
 					const image = await jimp.read(`converted/${images[i]}`, (err, data) => {
 						if (err) {
 							sharp(input = `converted/${images[i]}`)
-								.resize(mainApp.width, mainApp.height, {})
-								.toFile('./resized/' + images[i].replace('.jpg', '').replace('.png', '').replace('.webp', '').replace('.avif', '').replace('.gif', '') + `.${mainApp.formato.toLowerCase()}`);
+								.resize(mainApp.width, mainApp.height)
+								.toFile('./resized/' + images[i]);
 						} else {
 							data.resize(width, height)
 								.writeAsync(`resized/${images[i]}`);

@@ -1,11 +1,10 @@
 function convertImages() {
-	const resizeImages = require('./resize')
-	const fs = require('fs/promises');
 	const imageCompressor = require('./compressor');
 	const webpCompress = require('./webpCompress');
-	const path = require('path');
+	const resizeImages = require('./resize')
 	const mainApp = require('./app');
-	const Jimp = require("jimp");
+	const path = require('path');
+	const fs = require('fs/promises');
 	const sharp = require('sharp')
 	let callback = 0;
 
@@ -15,18 +14,9 @@ function convertImages() {
 			const images = files.filter((file) => true);
 
 			for (let i = 0; i < images.length; i++) {
-
-				Jimp.read(`./files/${images[i]}`, function(err, image) {
-					if (err) {
-						sharp(`./files/${images[i]}`)
-							.toFormat(mainApp.formato.toLowerCase(), {
-								quality: 100
-							})
-							.toFile('./converted/' + `${images[i]}`.replace('.jpg', '').replace('.png', '').replace('.webp', '').replace('.avif', '').replace('.gif', '') + `.${mainApp.formato.toLowerCase()}`)
-					} else {
-						image.write('./converted/' + `${images[i]}`.replace('.jpg', '').replace('.png', '').replace('.webp', '').replace('.avif', '').replace('.gif', '') + `.${mainApp.formato.toLowerCase()}`);
-					}
-				});
+				sharp(`./files/${images[i]}`)
+					.toFormat(mainApp.formato.toLowerCase(), { quality: 100 })
+					.toFile('./converted/' + `${images[i]}`.replace('.jpg', '').replace('.png', '').replace('.webp', '').replace('.avif', '').replace('.gif', '') + `.${mainApp.formato.toLowerCase()}`)
 
 				console.log("\033[0m" + `A imagem ${images[i]}` + "\033[0;32m foi convertida com sucesso!" + "\033[40;1;37m");
 
