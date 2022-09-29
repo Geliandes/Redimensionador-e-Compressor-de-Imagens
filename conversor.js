@@ -15,7 +15,7 @@ function convertImages() {
 
 			for (let i = 0; i < images.length; i++) {
 				sharp(`./files/${images[i]}`)
-					.toFormat(mainApp.formato.toLowerCase(), { quality: 100 })
+					.toFormat(mainApp.formato.toLowerCase(), { quality: mainApp.qualidadeDaConversao})
 					.toFile('./converted/' + `${images[i]}`.replace('.jpg', '').replace('.png', '').replace('.webp', '').replace('.avif', '').replace('.gif', '') + `.${mainApp.formato.toLowerCase()}`)
 
 				console.log("\033[0m" + `A imagem ${images[i]}` + "\033[0;32m foi convertida com sucesso!" + "\033[40;1;37m");

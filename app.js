@@ -24,7 +24,10 @@ const mainApp = {
     formato: 'jpg',
 
     // Digite um valor para a qualidade da imagem a ser comprimida (0 a 100). Recomendo um valor acima de 70
-    qualidade: 85
+    qualidade: 85,
+
+    // Digite um valor para a qualidade da imagem a ser convertida (0 a 100) - Valor padrão: 100
+    qualidadeDaConversao: 100
 }
 
 module.exports = mainApp;
