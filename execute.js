@@ -1,48 +1,48 @@
 const downloadImages = require('./download')
 
-function execute(){
-    var fs = require('fs');
-    var array = fs.readFileSync('insercao de links.txt').toString().replace(/(\r\n|\n|\r)/gm, "").split(",");
-    array = array.filter(vazio => vazio !== '');
-    let dir = "./files";
-    
-    //Verifica se não existe
-    if (!fs.existsSync(dir)){
-        //Efetua a criação do diretório
-        fs.mkdirSync(dir);
-    }
+function execute() {
+	var fs = require('fs');
+	var array = fs.readFileSync('insercao de links.txt').toString().replace(/(\r\n|\n|\r)/gm, "").split(",");
+	array = array.filter(vazio => vazio !== '');
+	let dir = "./files";
 
-    dir = "./resized";
-    //Verifica se não existe
-    if (!fs.existsSync(dir)){
-        //Efetua a criação do diretório
-        fs.mkdirSync(dir);
-    }
+	//Verifica se não existe
+	if (!fs.existsSync(dir)) {
+		//Efetua a criação do diretório
+		fs.mkdirSync(dir);
+	}
 
-    dir = "./compressed";
-    //Verifica se não existe
-    if (!fs.existsSync(dir)){
-        //Efetua a criação do diretório
-        fs.mkdirSync(dir);
-    }
+	dir = "./resized";
+	//Verifica se não existe
+	if (!fs.existsSync(dir)) {
+		//Efetua a criação do diretório
+		fs.mkdirSync(dir);
+	}
 
-    dir = "./converted";
-    //Verifica se não existe
-    if (!fs.existsSync(dir)){
-        //Efetua a criação do diretório
-        fs.mkdirSync(dir);
-    }
+	dir = "./compressed";
+	//Verifica se não existe
+	if (!fs.existsSync(dir)) {
+		//Efetua a criação do diretório
+		fs.mkdirSync(dir);
+	}
 
-    const textoFinal = {
-        arrayDeLinks: array
-    }
+	dir = "./converted";
+	//Verifica se não existe
+	if (!fs.existsSync(dir)) {
+		//Efetua a criação do diretório
+		fs.mkdirSync(dir);
+	}
 
-    console.log(textoFinal.arrayDeLinks);
-    console.log("\n\033[42;1;37m--- Iniciando o Download das imagens ---" + "\033[40;1;37m\n");
-    
-    module.exports = textoFinal;
+	const textoFinal = {
+		arrayDeLinks: array
+	}
 
-    downloadImages();
+	console.log(textoFinal.arrayDeLinks);
+	console.log("\n\033[42;1;37m--- Iniciando o Download das imagens ---" + "\033[40;1;37m\n");
+
+	module.exports = textoFinal;
+
+	downloadImages();
 }
 
 module.exports = execute;

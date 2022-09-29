@@ -1,43 +1,45 @@
-function downloadImages(){
-    const textoFinal = require('./execute');
-    const fs = require('fs');
-    const https = require('https');
-    const convertImages = require('./conversor')
-  
-    // URL da imagem
-    let url = textoFinal.arrayDeLinks;
+function downloadImages() {
+	const textoFinal = require('./execute');
+	const fs = require('fs');
+	const https = require('https');
+	const convertImages = require('./conversor')
 
-    // Regex para pegar o mesmo nome da imagem
-    const regex = new RegExp("\/([^/]*)$");
+	// URL da imagem
+	let url = textoFinal.arrayDeLinks;
 
-    let callback = 0;
+	// Regex para pegar o mesmo nome da imagem
+	const regex = new RegExp("\/([^/]*)$");
 
-    for(let i = 0; i < url.length; i++){
+	let callback = 0;
 
-        https.get(url[i],(res) => {
+	for (let i = 0; i < url.length; i++) {
 
-            let urlRegex = url[i].match(regex)[1]
-            let fileName = "img.jpg";
+		https.get(url[i], (res) => {
 
-            if(urlRegex !== undefined){
-                fileName = urlRegex;
-            }
+			let urlRegex = url[i].match(regex)[1]
+			let fileName = "img.jpg";
 
-            const path = `${__dirname}/files/${fileName}`; 
-            const filePath = fs.createWriteStream(path);
-            res.pipe(filePath);
-            filePath.on('finish',(err) => {
-                filePath.close();
-                console.log("\033[0m" + `Download da imagem ${fileName}` + "\033[0;32m concluído"); 
-                callback ++;
+			if (urlRegex !== undefined) {
+				fileName = urlRegex;
+			}
 
-                if(callback == url.length){
-                    console.log("\n\033[42;1;37m--- Downloads concluídos, iniciando a conversão das imagens ---" + "\033[40;1;37m\n");
-                    setTimeout(()=>{convertImages()},2000);
-                }
-            })
-        })
-    }
+			const path = `${__dirname}/files/${fileName}`;
+			const filePath = fs.createWriteStream(path);
+			res.pipe(filePath);
+			filePath.on('finish', (err) => {
+				filePath.close();
+				console.log("\033[0m" + `Download da imagem ${fileName}` + "\033[0;32m concluído");
+				callback++;
+
+				if (callback == url.length) {
+					console.log("\n\033[42;1;37m--- Downloads concluídos, iniciando a conversão das imagens ---" + "\033[40;1;37m\n");
+					setTimeout(() => {
+						convertImages()
+					}, 2000);
+				}
+			})
+		})
+	}
 }
 
 module.exports = downloadImages;
