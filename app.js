@@ -21,10 +21,10 @@ const mainApp = {
     height: null,
 
     // Insira o formato de saída (JPG, PNG, AVIF ou WEBP)
-    formato: 'webp',
+    formato: 'jpg',
 
     // Digite um valor para a qualidade da imagem a ser comprimida (0 a 100). Recomendo um valor acima de 70
-    qualidade: 85
+    qualidade: 90
 }
 
 module.exports = mainApp;
