@@ -35,7 +35,7 @@ function downloadImages() {
 					console.log("\n\033[42;1;37m--- Downloads concluídos, iniciando a conversão das imagens ---" + "\033[40;1;37m\n");
 					setTimeout(() => {
 						convertImages()
-					}, 2000);
+					}, 10000);
 				}
 			})
 		})

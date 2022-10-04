@@ -50,11 +50,11 @@ function resizeImages() {
 						if (mainApp.formato.toLowerCase() === 'webp') {
 							setTimeout(() => {
 								webpCompress()
-							}, 2000);
+							}, 10000);
 						} else {
 							setTimeout(() => {
 								imageCompressor()
-							}, 2000);
+							}, 10000);
 						}
 					}
 				}
