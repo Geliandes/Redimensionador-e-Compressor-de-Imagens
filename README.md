@@ -17,6 +17,12 @@ PS. Ainda não foi integrado suporte para compressão de AVIF, porém o redimens
 - Após preencher o arquivo de texto com os links, execute o comando **node app** no terminal do programa para executar;
 - Após a execução, serão criadas 3 pastas, "files", "resized" e "compressed". Em files serão armazenadas as imagens originais, em resized as imagens redimensionadas e em compressed as imagens redimensionadas em comprimidas.
 
+## Estrutura das pastas
+files = imagens originais baixadas
+conversed = imagem original convertida para o formato selecionado
+resized = imagem convertida para o formato selecionado e redimensionada para a dimensão especificada
+compressed = imagem convertida para o formato selecionado, redimensionada para a dimensão especificada e convertida para o valor especificado
+
 ## Comandos
 **Os comandos devem ser executado no terminal do Visual Studio Code**
 
