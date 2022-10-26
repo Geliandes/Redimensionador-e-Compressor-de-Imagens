@@ -44,7 +44,7 @@ function resizeImages() {
 
 				if (callback == images.length) {
 					console.log("\n\033[42;1;37m--- Redimensionamento concluído, iniciando a compressão das imagens ---" + "\033[40;1;37m\n");
-					if (mainApp.formato.toLowerCase() === 'avif') {
+					if (mainApp.formato.toLowerCase() == 'avif') {
 						console.log("\033[0;31mATENÇÃO! Não é possível comprimir imagens do tipo AVIF" + "\033[40;1;37m\n")
 					} else {
 						if (mainApp.formato.toLowerCase() == 'webp') {
