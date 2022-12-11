@@ -9,6 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "axios": "^1.2.1",
     "compress-images": "^2.0.5",
     "gifsicle": "^5.2.1",
     "jimp": "^0.16.2",

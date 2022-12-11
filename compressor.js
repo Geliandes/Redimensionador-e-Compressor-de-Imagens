@@ -4,6 +4,8 @@ function imageCompressor() {
 	const path = require('path');
 	const compress_images = require('compress-images');
 
+	console.log('executou o compressor')
+	
 	let dir = 'resized'
 
 	function compress(pathInput, outputPath) {

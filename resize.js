@@ -2,15 +2,18 @@ function resizeImages() {
 	const mainApp = require('./app');
 	const imageCompressor = require('./compressor');
 	const webpCompress = require('./webpCompress');
-	const fs = require('fs/promises');
+	const textoFinal = require('./execute');
+	const fsp = require('fs/promises');
+	const fs = require('fs');
 	const path = require('path');
 	const jimp = require('jimp');
 	const sharp = require('sharp');
+	let url = textoFinal.arrayDeLinks;
+	const regex = new RegExp("\/([^/]*)$");
 
-	let callback = 0;
-
-	fs.readdir(path.join('./converted'))
+	fsp.readdir(path.join('./converted'))
 		.then(files => {
+			let callback = 0;
 			const images = files.filter((file) => true);
 
 			let height = mainApp.height;
@@ -41,26 +44,62 @@ function resizeImages() {
 
 				console.log("\033[0m" + `A imagem ${images[i]}` + "\033[0;32m foi redimensionada com sucesso!" + "\033[40;1;37m");
 				callback++;
-
-				if (callback == images.length) {
-					console.log("\n\033[42;1;37m--- Redimensionamento concluído, iniciando a compressão das imagens ---" + "\033[40;1;37m\n");
-					if (mainApp.formato.toLowerCase() == 'avif') {
-						console.log("\033[0;31mATENÇÃO! Não é possível comprimir imagens do tipo AVIF" + "\033[40;1;37m\n")
-					} else {
-						if (mainApp.formato.toLowerCase() == 'webp') {
-							setTimeout(() => {
-								webpCompress()
-							}, 10000);
-						} else {
-							setTimeout(() => {
-								imageCompressor()
-							}, 10000);
-						}
-					}
-				}
+			}
+			if (callback == images.length) {
+				interval();
 			}
 		}
     )
+
+	function interval() {
+
+		console.log('\n> Verificando se o arquivo existe');
+
+		let filesExist = 0;
+
+		var meuInterval = setInterval(function() {
+
+			for (let i = 0; i < url.length; i++) {
+				let urlRegex = url[i].match(regex)[1]
+
+				let fileName = "img.jpg";
+
+				if (urlRegex !== undefined) {
+					fileName = urlRegex.replace('.jpg', '').replace('.png', '').replace('.webp', '').replace('.avif', '').replace('.gif', '') + `.${mainApp.formato.toLowerCase()}`;
+				}
+
+				const path = `${__dirname}/resized/${fileName}`;
+
+				fs.access(path, fs.constants.F_OK, (err) => {
+
+					if (err) {
+					} else {
+						filesExist++;
+					}
+				})
+			}
+
+			if(filesExist == url.length){
+				callback(true)
+				clearInterval(meuInterval);
+			}
+		}, 1000)
+	}
+
+	function callback(situation) {
+		if (situation == true) {
+			console.log("\n\033[42;1;37m--- Redimensionamento concluído, iniciando a compressão das imagens ---" + "\033[40;1;37m\n");
+			if (mainApp.formato.toLowerCase() == 'avif') {
+				console.log("\033[0;31mATENÇÃO! Não é possível comprimir imagens do tipo AVIF" + "\033[40;1;37m\n")
+			} else {
+				if (mainApp.formato.toLowerCase() == 'webp') {
+						setTimeout(webpCompress, 100);
+				} else {
+					setTimeout(imageCompressor, 100);	
+				}
+			}
+		}
+	}
 }
 
 module.exports = resizeImages;

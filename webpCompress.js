@@ -7,6 +7,7 @@ if (mainApp.width == null && mainApp.height == null) {
 }
 
 function webpCompress() {
+	console.log('executou o compressor webp')
 	const fs = require('fs');
 	const sharp = require('sharp');
 	const fsp = require('fs/promises');
