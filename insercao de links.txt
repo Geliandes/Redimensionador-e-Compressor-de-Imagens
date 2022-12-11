@@ -1,1 +1,4 @@
-https://recursos.tudodebicho.com.br/i/guiaderacas/dalmata/cachorro-dalmata-deitado.jpg
+https://example.com/example-1.jpg,
+https://example.com/example-2.jpg,
+https://example.com/example-3.png,
+https://example.com/example-4.webp

@@ -4,9 +4,7 @@ function imageCompressor() {
 	const path = require('path');
 	const compress_images = require('compress-images');
 
-	console.log('executou o compressor')
-	
-	let dir = 'resized'
+	let dir = 'resized';
 
 	function compress(pathInput, outputPath) {
 
@@ -47,7 +45,7 @@ function imageCompressor() {
 	}
 
 	if (mainApp.width == null && mainApp.height == null) {
-		dir = 'converted'
+		dir = 'converted';
 	}
 
 	fs.readdir(path.join(`./${dir}`))
@@ -59,8 +57,7 @@ function imageCompressor() {
 				compress(`${dir}/${images[i]}`, outputPath);
 				console.log("\033[40;1;37m" + `A imagem ${images[i]}` + "\033[0;32m foi comprimida com sucesso!" + "\033[40;1;37m");
 			}
-		}
-    )
+		})
 }
 
 module.exports = imageCompressor;

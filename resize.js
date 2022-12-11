@@ -3,24 +3,29 @@ function resizeImages() {
 	const imageCompressor = require('./compressor');
 	const webpCompress = require('./webpCompress');
 	const textoFinal = require('./execute');
+
 	const fsp = require('fs/promises');
 	const fs = require('fs');
 	const path = require('path');
 	const jimp = require('jimp');
 	const sharp = require('sharp');
+
 	let url = textoFinal.arrayDeLinks;
+
 	const regex = new RegExp("\/([^/]*)$");
+
+	let callbackImg = 0;
 
 	fsp.readdir(path.join('./converted'))
 		.then(files => {
-			let callback = 0;
+
 			const images = files.filter((file) => true);
 
 			let height = mainApp.height;
 			let width = mainApp.width;
 
-			height == null ? height = jimp.AUTO : height = mainApp.height
-			width == null ? width = jimp.AUTO : width = mainApp.width
+			height == null ? height = jimp.AUTO : height = mainApp.height;
+			width == null ? width = jimp.AUTO : width = mainApp.width;
 
 			for (let i = 0; i < images.length; i++) {
 
@@ -43,13 +48,16 @@ function resizeImages() {
 				main();
 
 				console.log("\033[0m" + `A imagem ${images[i]}` + "\033[0;32m foi redimensionada com sucesso!" + "\033[40;1;37m");
-				callback++;
+				callbackImg++;
 			}
-			if (callback == images.length) {
+
+
+			if (callbackImg == images.length) {
 				interval();
 			}
-		}
-    )
+		})
+
+
 
 	function interval() {
 
@@ -60,7 +68,7 @@ function resizeImages() {
 		var meuInterval = setInterval(function() {
 
 			for (let i = 0; i < url.length; i++) {
-				let urlRegex = url[i].match(regex)[1]
+				let urlRegex = url[i].match(regex)[1];
 
 				let fileName = "img.jpg";
 
@@ -72,15 +80,14 @@ function resizeImages() {
 
 				fs.access(path, fs.constants.F_OK, (err) => {
 
-					if (err) {
-					} else {
+					if (err) {} else {
 						filesExist++;
 					}
 				})
 			}
 
-			if(filesExist == url.length){
-				callback(true)
+			if (filesExist == url.length) {
+				callback(true);
 				clearInterval(meuInterval);
 			}
 		}, 1000)
@@ -90,12 +97,12 @@ function resizeImages() {
 		if (situation == true) {
 			console.log("\n\033[42;1;37m--- Redimensionamento concluído, iniciando a compressão das imagens ---" + "\033[40;1;37m\n");
 			if (mainApp.formato.toLowerCase() == 'avif') {
-				console.log("\033[0;31mATENÇÃO! Não é possível comprimir imagens do tipo AVIF" + "\033[40;1;37m\n")
+				console.log("\033[0;31mATENÇÃO! Não é possível comprimir imagens do tipo AVIF" + "\033[40;1;37m\n");
 			} else {
 				if (mainApp.formato.toLowerCase() == 'webp') {
-						setTimeout(webpCompress, 100);
+					webpCompress();
 				} else {
-					setTimeout(imageCompressor, 100);	
+					imageCompressor();
 				}
 			}
 		}

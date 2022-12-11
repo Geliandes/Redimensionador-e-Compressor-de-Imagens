@@ -1,5 +1,5 @@
 function downloadImages() {
-	const convertImages = require('./conversor')
+	const convertImages = require('./conversor');
 	const textoFinal = require('./execute');
 	const fs = require('fs');
 	const https = require('https');
@@ -16,7 +16,7 @@ function downloadImages() {
 
 		https.get(url[i], (res) => {
 
-			let urlRegex = url[i].match(regex)[1]
+			let urlRegex = url[i].match(regex)[1];
 			let fileName = "img.jpg";
 
 			if (urlRegex !== undefined) {
@@ -32,7 +32,7 @@ function downloadImages() {
 				callbackImg++;
 
 				if (callbackImg == url.length) {
-					interval()
+					interval();
 				}
 			})
 		})
@@ -46,7 +46,7 @@ function downloadImages() {
 		var meuInterval = setInterval(function() {
 
 			for (let i = 0; i < url.length; i++) {
-				let urlRegex = url[i].match(regex)[1]
+				let urlRegex = url[i].match(regex)[1];
 
 				let fileName = "img.jpg";
 
@@ -58,27 +58,25 @@ function downloadImages() {
 
 				fs.access(path, fs.constants.F_OK, (err) => {
 
-					if (err) {
-					} else {
+					if (!err) {
 						filesExist++;
 					}
 				})
 			}
 
-			if(filesExist == url.length){
-				callback(true)
+			if (filesExist == url.length) {
+				callback(true);
 				clearInterval(meuInterval);
 			}
-		}, 1000)
+		}, 1000);
 	}
-	
+
 	function callback(situation) {
 		if (situation == true) {
 			console.log("\n\033[42;1;37m--- Iniciando a conversão das imagens ---" + "\033[40;1;37m\n");
-			convertImages()
+			convertImages();
 		}
 	}
-
 }
 
 module.exports = downloadImages;

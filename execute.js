@@ -1,9 +1,16 @@
-const downloadImages = require('./download')
+const downloadImages = require('./download');
 
 function execute() {
 	var fs = require('fs');
 	var array = fs.readFileSync('insercao de links.txt').toString().replace(/(\r\n|\n|\r)/gm, "").split(",");
 	array = array.filter(vazio => vazio !== '');
+
+	for(let i = 0; i < array.length; i++){
+		const urlImages = new URL(array[i]); 
+		let params = urlImages.search;
+		array[i] = urlImages.href.replace(params, '');
+	}
+
 	let dir = "./files";
 
 	//Verifica se não existe

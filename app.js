@@ -12,22 +12,22 @@ const execute = require('./execute');
 
 const mainApp = {
 
-    // Caso queira manter as proporções da imagem, basta deixar o width ou o height como "null". Caso não queira redimensionar a imagem, basta deixar tanto o width quanto o height como "null"
+	// Caso queira manter as proporções da imagem, basta deixar o width ou o height como "null". Caso não queira redimensionar a imagem, basta deixar tanto o width quanto o height como "null"
 
-    // Digite a largura da imagem em px
-    width: 1080,
+	// Digite a largura da imagem em px
+	width: 1080,
 
-    // Digite a altura da imagem em pc
-    height: null,
+	// Digite a altura da imagem em pc
+	height: null,
 
-    // Insira o formato de saída (JPG, PNG, AVIF ou WEBP)
-    formato: 'jpg',
+	// Insira o formato de saída (JPG, PNG, AVIF ou WEBP)
+	formato: 'png',
 
-    // Digite um valor para a qualidade da imagem a ser comprimida (0 a 100). Recomendo um valor acima de 70
-    qualidade: 80,
+	// Digite um valor para a qualidade da imagem a ser comprimida (0 a 100). Recomendo um valor acima de 70
+	qualidade: 80,
 
-    // Digite um valor para a qualidade da imagem a ser convertida (0 a 100) - Valor padrão: 100
-    qualidadeDaConversao: 100
+	// Digite um valor para a qualidade da imagem a ser convertida (0 a 100) - Valor padrão: 100
+	qualidadeDaConversao: 100
 }
 
 module.exports = mainApp;
