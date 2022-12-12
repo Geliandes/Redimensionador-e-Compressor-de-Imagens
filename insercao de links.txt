@@ -1,5 +1,5 @@
 https://example.com/example-1.jpg,
-https://tudodebicho.fbitsstatic.net/img/b/181cba16-eb48-48c5-b260-a421324ffe2b.jpg,
+https://img.freepik.com/free-vector/night-ocean-landscape-full-moon-stars-shine_107791-7397.jpg?w=2000,
 https://example.com/example-2.jpg,
 https://example.com/example-3.png,
 https://example.com/example-4.webp,

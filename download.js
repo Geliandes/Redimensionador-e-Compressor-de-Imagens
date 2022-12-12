@@ -28,7 +28,7 @@ function downloadImages() {
 			res.pipe(filePath);
 			filePath.on('finish', (err) => {
 				filePath.close();
-				console.log("\033[0m" + `Download da imagem ${fileName}` + "\033[0;32m concluído");
+				console.log("\033[0m" + `Download da imagem ${fileName}` + "\033[0;32m concluído \033[0m");
 				callbackImg++;
 
 				if (callbackImg == url.length) {
@@ -39,7 +39,7 @@ function downloadImages() {
 	}
 
 	function interval() {
-		console.log('\n> Verificando se o arquivo existe');
+		console.log('\n> Verificando se o(s) arquivo(s) está(ão) pronto(s)');
 
 		let filesExist = 0;
 

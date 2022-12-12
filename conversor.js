@@ -38,7 +38,7 @@ function convertImages() {
 
 	function interval() {
 
-		console.log('\n> Verificando se o arquivo existe');
+		console.log('\n> Verificando se o(s) arquivo(s) está(ão) pronto(s)');
 
 		let filesExist = 0;
 
