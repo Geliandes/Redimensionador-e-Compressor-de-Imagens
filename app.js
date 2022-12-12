@@ -2,7 +2,7 @@ const execute = require('./execute');
 
 // INSTRUÇÕES DE USO:
 
-// Insira os links das imagens a serem redimensionadas no arquivo "insercao de links.txt" (os links devem ser separados por vírgula e não devem conter parametrizações, devem ser terminadas com o formato da imagem, example.com.br/image.JPG)
+// Insira os links das imagens a serem redimensionadas no arquivo "insercao de links.txt" (os links devem ser separados por vírgula)
 
 // Após inserir o link das imagens no documento de texto, execute o comando "npm install" no terminal do Visual Studio Code para instalar todas as dependências
 
